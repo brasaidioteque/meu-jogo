@@ -20,14 +20,13 @@ DadosPersonagem exibir(string nome, int vida, int ataque) {
     return dados; // Retorna tudo de uma vez
 }
 
-int main() {
-    // Chamamos a função e guardamos o resultado na ficha da nossa chef
-    DadosPersonagem chef = exibir("Mei, a Mestre dos Macarons", 5, 15);
+// FUNÇÃO ADICIONADA: Calcula o dano e garante que nunca seja menor que zero
+int dano(int ataque, int defesa) {
+    int resultado = ataque - defesa;
     
-    // Imprimindo os resultados acessando as variáveis da struct (.nome, .vida, .ataque)
-    cout << chef.nome << "\n";
-    cout << "?? Vida: " << chef.vida << " | ?? Ataque: " << chef.ataque << "\n";
-    cout << "-------------------------\n";
-
-    return 0;
+    if (resultado < 0) {
+        return 0; // Se a defesa for maior que o ataque, o dano vira zero
+    }
+    
+    return resultado; // Retorna o ataque menos a defesa
 }
