@@ -1,0 +1,5 @@
+personagens.txt
+
+Nome: Mei, a Mestre dos Macarons
+Vida: 5 Corações de Morango
+Ataque: Batedor de Claras Mágico (Dano: 15 Pontos de Doçura).
